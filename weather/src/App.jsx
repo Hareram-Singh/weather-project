@@ -6,8 +6,8 @@ import TimeLocation from "./component/TimeLocation";
 import TemperatureDetails from "./component/TemperatureDetails";
 import Forecast from "./component/Forecast";
 import getFormatedWeatherData from "./Services/WeatherService";
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [query, setQuery] = useState({ q: "delhi" });
@@ -39,9 +39,11 @@ function App() {
   };
   return (
     <>
-      <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
-        <Topbutton setQuery={setQuery}/>
-        <Inputs setQuery={setQuery} units={units} setUnits={setUnits}/>
+      <div
+        className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}
+      >
+        <Topbutton setQuery={setQuery} />
+        <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
 
         {weather && (
           <div>
